@@ -1,0 +1,8 @@
+{
+  "name": "DM_Golem",
+  "version": "0.0.1",
+  "description": "Bot that rolls dice and might do some primitive form of DnD",
+  "main": "bot.js",
+  "author": "Devin Foulger",
+  "dependencies": {}
+}
