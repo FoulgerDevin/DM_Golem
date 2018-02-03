@@ -35,7 +35,8 @@ bot.on('ready', function(evnt) {
 
 bot.on('message', function(user, userId, channelId, message, evnt) {
 	//Listen for messages that start with $
-	if (message.substring(0,1) == '$' && ((channelId == "406231410047975424") || (channelId == "345347162420281357"))) {
+	if (message.substring(0,1) == '$' && ((channelId == "406231410047975424") || (channelId == "345347162420281357"))
+			&& (userId != bot.id)) {
 		var args = message.substring(1).split(' ');
 		var cmd = args[0];
 		
@@ -134,6 +135,14 @@ bot.on('message', function(user, userId, channelId, message, evnt) {
 					});
 					break;
 				}
+			break;
+			
+			case 'RIP', 'rip': {
+				bot.sendMessage({
+					to: channelId,
+					message: "RIP Multiple $echo: 9:18 PM Feb 2nd 2018 - 9:27 PM Feb 2nd 2018. You will be missed."
+				});
+			}
 			break;
 			
 			default:
