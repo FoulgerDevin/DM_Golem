@@ -30,6 +30,7 @@ bot.on('ready', function(evnt) {
 	logger.info('Connected');
 	logger.info('Logged in as: ');
 	logger.info(bot.username + ' - (' + bot.id + ')');
+	bot.setPresence( { "game" : { "name": "$help"} } );
 });
 
 bot.on('message', function(user, userId, channelId, message, evnt) {
